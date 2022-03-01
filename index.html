@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <img class="tilt" src="images/home-pic.jpg" alt="">
+        <h3 style="color:rgb(75, 75, 155);"> Sarun  Bhatta  </h3>
+        <p>  I am a web developer </p>
+        <a href="#about" class="btn">about me</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"><span style="color:rgb(75, 75, 155);">about me</span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="images/about-pic.jpg" alt="">
+        </div>
+
+        <div class="content">
+           <h3 style="color:rgb(52, 75, 15);"> My name is Sarun Bhatta </h3>
+            <p class="info"></p>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> Age: </span> 22 </p>
+                    <p> <span> Gender: </span> male </p>
+                    
+                    <p> <span> Freelance : </span> available </p>
+                </div>
+                <div class="box">
+                   
+                    <p> <span> Phone : </span> 9861588839 </p>
+                    <p> <span> Email : </span> bhattasarun@gmail.com </p>
+                    <p> <span> Address : </span> Kathmandu,Nepal </p>
+                </div>
+            </div>
+            <a href="Resume.pdf"   class="btn" download>Download CV</a>
+         
+
+            
+           
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> <span style="color:rgb(75, 75, 155);">my services</span>  </h1>
+
+    <div class="box-container">
+
+        <div class="box tilt">
+            <i class="fas fa-code"></i>
+            <h3>web development</h3>
+            <p> Websites and Web apps are developed with focus on software development life cycle.</p>
+        </div>
+        
+
+        <div class="box tilt">
+            <i class="fab fa-wordpress"></i>
+            <h3>wordpress</h3>
+            <p>  Attractive e-commerce websites are developed using suitable themes. </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading" style="color:rgb(75, 75, 155);"> contact  me  </h1>
+
+    <div class="row">
+            <form action="https://formsubmit.co/ce585a0949066b40c1ef35e1a144ffcc " method="POST" >
+           
+            <div class="inputBox">
+                <input type="hidden" name="_subject" value="New submission!">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="name" placeholder="name"  required >
+            </div>
+
+            <textarea placeholder="message" name="" id="" cols="5" rows="5" required></textarea>
+            <input type="submit" class="btn" value="send">
+
+        </form>  
+       
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+
+
+<!-- javascript part  -->
+
+<!-- typed.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<!-- particles.js links  -->
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+
+<!-- vanilla-tilt.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+let menu = document.querySelector('#menu-bars');
+let header = document.querySelector('header');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+};
+
+var typed = new Typed('.typing-text', {
+    strings : ['front end developer', 'web designer', 'graphic designer', 'web developer'],
+    loop : true,
+    typeSpeed : 150
+});
+
+VanillaTilt.init(document.querySelectorAll('.tilt'),{
+    max:25
+});
+
+</script>
+
+
+
+</body>
+</html>
